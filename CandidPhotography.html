@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candid Photography</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Bandham Photography</h1>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#blog">Blog</a></li>
+                <li><a href="index.html#about">About Me</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="index.html#booking">Book Event</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61565215583674" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/bandham_photography/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@Charanrajkolagani" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </header>
+    
+    <section class="gallery">
+        <div class="gallery-item"><img src="CandidPhotography/DSC_1710.JPG" alt="Candid Image 1"></div>
+        <div class="gallery-item"><img src="CandidPhotography/DSC_1712.JPG" alt="Candid Image 2"></div>
+        <div class="gallery-item"><img src="CandidPhotography/DSC_1724.JPG" alt="Candid Image 3"></div>
+        <div class="gallery-item"><img src="CandidPhotography/DSC_1726.JPG" alt="Candid Image 4"></div>
+        <div class="gallery-item"><img src="CandidPhotography/DSC_1866.JPG" alt="Candid Image 5"></div>
+        <div class="gallery-item"><img src="CandidPhotography/DSC_1904.JPG" alt="Candid Image 6"></div>
+        <div class="gallery-item"><img src="CandidPhotography/DSC_1907.JPG" alt="Candid Image 7"></div>
+        <div class="gallery-item"><img src="CandidPhotography/DSC_1952.JPG" alt="Candid Image 8"></div>
+        <div class="gallery-item"><img src="CandidPhotography/DSC_1965.JPG" alt="Candid Image 10"></div>
+        <div class="gallery-item"><img src="CandidPhotography/DSC_1976.JPG" alt="Candid Image 11"></div>
+    </section>
+</body>
+</html>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+        /* Social Icons Styling */
+        .social-icons {
+        display: flex;
+        gap: 30px;
+    }
+
+    .social-icons a {
+        color: white;
+        font-size: 1.5rem;
+        transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+        color: #ffffff;
+    }
+    header {
+        background: black;
+        color: white;
+        padding: 20px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+    .h1 a {
+        color: white ;
+    }
+    
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 10px;
+        padding: 80px 20px 20px;
+    }
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        transition: transform 0.3s;
+    }
+    .gallery-item img:hover {
+        transform: scale(1.05);
+    }
+</style>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bird Photography</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Bandham Photography</h1>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#blog">Blog</a></li>
+                <li><a href="index.html#about">About Me</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="index.html#booking">Book Event</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61565215583674" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/bandham_photography/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@Charanrajkolagani" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </header>
+    
+    <section class="gallery">
+        <div class="gallery-item"><img src="BirdPhotography/edit-1.jpg" alt="BirdPhotography Image 1"></div>
+        <div class="gallery-item"><img src="BirdPhotography/edit-1b.jpg" alt="BirdPhotography Image 2"></div>
+        <div class="gallery-item"><img src="BirdPhotography/edit-2a.jpg" alt="BirdPhotography Image 3"></div>
+        <div class="gallery-item"><img src="BirdPhotography/edit-2b.jpg" alt="BirdPhotography Image 4"></div>
+        <div class="gallery-item"><img src="BirdPhotography/edit-2c.jpg" alt="BirdPhotography Image 5"></div>
+        <div class="gallery-item"><img src="BirdPhotography/edit-2d.jpg" alt="BirdPhotography Image 6"></div>
+        <div class="gallery-item"><img src="BirdPhotography/edit-3b.jpg" alt="BirdPhotography Image 7"></div>
+        <div class="gallery-item"><img src="BirdPhotography/edi-3a.jpg" alt="BirdPhotography Image 8"></div>
+        <div class="gallery-item"><img src="BirdPhotography/edit-3c.jpg" alt="BirdPhotography Image 9"></div>
+        <div class="gallery-item"><img src="BirdPhotography/edit-3d.jpg" alt="BirdPhotography Image 10"></div>
+        <div class="gallery-item"><img src="BirdPhotography/edit-5b.jpg" alt="BirdPhotography Image 11"></div>
+        <div class="gallery-item"><img src="BirdPhotography/edit-5g.jpg" alt="BirdPhotography Image 12"></div>
+        <div class="gallery-item"><img src="BirdPhotography/edit-7a.jpg" alt="BirdPhotography Image 13"></div>
+        <div class="gallery-item"><img src="BirdPhotography/edit-7b.jpg" alt="BirdPhotography Image 14"></div>
+        <div class="gallery-item"><img src="BirdPhotography/edit-7c.jpg" alt="BirdPhotography Image 15"></div>
+        <div class="gallery-item"><img src="BirdPhotography/edit-7d.jpg" alt="BirdPhotography Image 16"></div>
+        <div class="gallery-item"><img src="BirdPhotography/edit-7i.jpg" alt="BirdPhotography Image 17"></div>
+        <div class="gallery-item"><img src="BirdPhotography/edit-7i1.jpg" alt="BirdPhotography Image 18"></div>
+        <div class="gallery-item"><img src="BirdPhotography/edit-7j.jpg" alt="BirdPhotography Image 19"></div>
+        <div class="gallery-item"><img src="BirdPhotography/edit-7j1.jpg" alt="BirdPhotography Image 20"></div>
+        <div class="gallery-item"><img src="BirdPhotography/edit-7k.jpg" alt="BirdPhotography Image 21"></div>
+        <div class="gallery-item"><img src="BirdPhotography/edit-7m.jpg" alt="BirdPhotography Image 22"></div>
+        <div class="gallery-item"><img src="BirdPhotography/edit-8q.jpg" alt="BirdPhotography Image 23"></div>
+        <div class="gallery-item"><img src="BirdPhotography/edit-8r.jpg" alt="BirdPhotography Image 24"></div>
+    </section>
+</body>
+</html>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+        /* Social Icons Styling */
+        .social-icons {
+        display: flex;
+        gap: 30px;
+    }
+
+    .social-icons a {
+        color: white;
+        font-size: 1.5rem;
+        transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+        color: #ffffff;
+    }
+    header {
+        background: black;
+        color: white;
+        padding: 20px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+    .h1 a {
+        color: white ;
+    }
+    
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 10px;
+        padding: 80px 20px 20px;
+    }
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        transition: transform 0.3s;
+    }
+    .gallery-item img:hover {
+        transform: scale(1.05);
+    }
+</style>

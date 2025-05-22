@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildlife Photography</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Bandham Photography</h1>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#blog">Blog</a></li>
+                <li><a href="index.html#about">About Me</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="index.html#booking">Book Event</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61565215583674" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/bandham_photography/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@Charanrajkolagani" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </header>
+    
+    <section class="gallery">
+        <div class="gallery-item"><img src="WildlifePhotography/DSC_0624.JPG" alt="Wildlife Image 1"></div>
+        <div class="gallery-item"><img src="WildlifePhotography/DSC_0633.JPG" alt="Wildlife Image 2"></div>
+        <div class="gallery-item"><img src="WildlifePhotography/DSC_0634.JPG" alt="Wildlife Image 3"></div>
+        <div class="gallery-item"><img src="WildlifePhotography/DSC_0641.JPG" alt="Wildlife Image 4"></div>
+        <div class="gallery-item"><img src="WildlifePhotography/DSC_0657.JPG" alt="Wildlife Image 5"></div>
+        <div class="gallery-item"><img src="WildlifePhotography/DSC_0658.JPG" alt="Wildlife Image 6"></div>
+        <div class="gallery-item"><img src="WildlifePhotography/DSC_0664.JPG" alt="Wildlife Image 7"></div>
+        <div class="gallery-item"><img src="WildlifePhotography/DSC_0668.JPG" alt="Wildlife Image 8"></div>
+        <div class="gallery-item"><img src="WildlifePhotography/DSC_0685.JPG" alt="Wildlife Image 9"></div>
+        <div class="gallery-item"><img src="WildlifePhotography/DSC_0687.JPG" alt="Wildlife Image 10"></div>
+        <div class="gallery-item"><img src="WildlifePhotography/DSC_0694.JPG" alt="Wildlife Image 11"></div>
+        <div class="gallery-item"><img src="WildlifePhotography/DSC_0705.JPG" alt="Wildlife Image 12"></div>
+        <div class="gallery-item"><img src="WildlifePhotography/DSC_0707.JPG" alt="Wildlife Image 13"></div>
+        <div class="gallery-item"><img src="WildlifePhotography/DSC_0711.JPG" alt="Wildlife Image 14"></div>
+        <div class="gallery-item"><img src="WildlifePhotography/DSC_0773.JPG" alt="Wildlife Image 15"></div>
+        <div class="gallery-item"><img src="WildlifePhotography/DSC_0781.JPG" alt="Wildlife Image 16"></div>
+        <div class="gallery-item"><img src="WildlifePhotography/DSC_0791.JPG" alt="Wildlife Image 17"></div>
+        <div class="gallery-item"><img src="WildlifePhotography/DSC_0819.JPG" alt="Wildlife Image 18"></div>
+    </section>
+</body>
+</html>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+        /* Social Icons Styling */
+        .social-icons {
+        display: flex;
+        gap: 30px;
+    }
+
+    .social-icons a {
+        color: white;
+        font-size: 1.5rem;
+        transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+        color: #ffffff;
+    }
+    header {
+        background: black;
+        color: white;
+        padding: 20px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+    .h1 a {
+        color: white ;
+    }
+    
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 10px;
+        padding: 80px 20px 20px;
+    }
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        transition: transform 0.3s;
+    }
+    .gallery-item img:hover {
+        transform: scale(1.05);
+    }
+</style>

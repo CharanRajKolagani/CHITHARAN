@@ -122,15 +122,70 @@
     </section>
     
 
-    <section id="blog">
+    <!-- <section id="blog">
         <h2>Blog</h2>
         <p>Coming Soon...</p>
-    </section>
+    </section> -->
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Welcome to Bandham Photography, led by Charan Raj, a professional photographer passionate about capturing unforgettable moments.</p>
-    </section>
+    <section id="about" class="about-section" data-aos="fade-up">
+  <div class="about-card about-uiux">
+    <div class="about-photo-uiux">
+      <img src="aboutmephoto.jpg" alt="Charan Raj Profile Photo" class="about-profile-img" />
+    </div>
+    <div class="about-info">
+      <h2 class="about-title" data-aos="zoom-in" data-aos-delay="100">About Me</h2>
+      <div class="about-text">
+        <p>
+          Hi, I’m <strong>Charan Raj</strong> — a passionate and versatile visual artist specializing in photography, videography, and cinematography, with over 2 years of creative experience. My journey behind the lens has led me to capture a wide variety of stories, from the grace of classical dance events to the spontaneity of candid moments, fashion shoots, and model portfolios.
+        </p>
+        <p>
+          I’ve worked on engaging shoots with emerging YouTube influencers and artists, delivering visuals that truly reflect their personality and vision. Whether it's an event, a travel story, or a fashion project, I bring a personalized and professional approach to every shoot.
+        </p>
+        <p>
+          Equipped with a Nikon Z50, I also have access to high-end equipment on request, ensuring I meet the specific needs of any project. I’m open to freelance opportunities and always excited to collaborate, explore new concepts, and bring fresh ideas to life through my lens.
+        </p>
+        <p>
+          <strong>Let’s create something extraordinary together.</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+// filepath: c:\Users\chara\Desktop\CHITHARAN\index.html
+document.addEventListener('DOMContentLoaded', function() {
+    // Photo upload preview
+    const aboutPhotoInput = document.getElementById('about-photo');
+    const photoPreview = document.getElementById('photoPreview');
+    if (aboutPhotoInput && photoPreview) {
+        aboutPhotoInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(evt) {
+                    photoPreview.style.backgroundImage = `url('${evt.target.result}')`;
+                    photoPreview.innerHTML = '';
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    }
+
+    // Parallax/tilt effect on photo area
+    const aboutPhotoArea = document.getElementById('aboutPhotoArea');
+    if (aboutPhotoArea) {
+        aboutPhotoArea.addEventListener('mousemove', function(e) {
+            const rect = aboutPhotoArea.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width/2;
+            const y = e.clientY - rect.top - rect.height/2;
+            aboutPhotoArea.style.transform = `rotateY(${x/20}deg) rotateX(${-y/20}deg) scale(1.04)`;
+        });
+        aboutPhotoArea.addEventListener('mouseleave', function() {
+            aboutPhotoArea.style.transform = 'rotateY(0deg) rotateX(0deg) scale(1)';
+        });
+    }
+});
+</script>
 
     <section id="contact">
         <h2>Contact</h2>

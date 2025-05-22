@@ -192,10 +192,46 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
+    const headerMenu = document.querySelector('.header-menu');
     const mainNav = document.querySelector('.main-nav');
-    if (menuToggle && mainNav) {
-        menuToggle.addEventListener('click', function() {
+    let justToggled = false;
+
+    // Open/close menu on button click
+    if (menuToggle && headerMenu && mainNav) {
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            headerMenu.classList.toggle('active');
             mainNav.classList.toggle('active');
+            justToggled = true;
+            setTimeout(() => { justToggled = false; }, 100); // Prevent immediate close
+        });
+    }
+
+    // Function to close menu
+    function closeMenu(e) {
+        if (
+            headerMenu &&
+            headerMenu.classList.contains('active') &&
+            !headerMenu.contains(e.target) &&
+            !menuToggle.contains(e.target) &&
+            !justToggled
+        ) {
+            headerMenu.classList.remove('active');
+            mainNav.classList.remove('active');
+        }
+    }
+
+    // Close menu on click or touch anywhere outside
+    document.addEventListener('click', closeMenu);
+    document.addEventListener('touchstart', closeMenu);
+
+    // Optional: Close menu when a menu link is clicked
+    if (headerMenu) {
+        headerMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function() {
+                headerMenu.classList.remove('active');
+                mainNav.classList.remove('active');
+            });
         });
     }
 });

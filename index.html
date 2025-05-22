@@ -16,28 +16,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
     <header>
-        <h1 class="site-logo">CHITHARAN</h1>
+        <div class="site-logo">CHITHARAN</div>
         <nav class="main-nav">
-            <button class="menu-toggle" aria-label="Toggle menu">
+            <button class="menu-toggle" aria-label="Open Menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            <div class="menu-panel">
-                <ul class="nav-links">
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#booking">Book Event</a></li>
-                </ul>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/profile.php?id=61565215583674" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/bandham_photography/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/@Charanrajkolagani" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <div class="header-menu">
+                <div class="menu-panel">
+                    <ul class="nav-links">
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#booking">Book Event</a></li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61565215583674" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/bandham_photography/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@Charanrajkolagani" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -73,41 +76,47 @@
     <section id="portfolio">
         <h2 class="portfolio-title">Portfolio</h2>
         <div class="categories">
-            <div class="category" data-aos="fade-up">
-                <h3 class="category-title" >Fashion Photography</h3>
+            <div class="category">
+                <h3 class="category-title">Fashion Photography</h3>
                 <a href="FashionPhotography.html">
-                <img src="fashion.JPG" alt="Fashion Photography"></a>
+                    <img src="fashion.JPG" alt="Fashion Photography">
+                </a>
             </div>
-            <div class="category" data-aos="fade-up" data-aos-delay="100">
+            <div class="category">
                 <h3 class="category-title">Celebrity Photography</h3>
                 <a href="CelebrityPhotography.html">
-                <img src="celebrity.JPG" alt="Celebrity Photography"></a>
+                    <img src="celebrity.JPG" alt="Celebrity Photography">
+                </a>
             </div>
-            <div class="category" data-aos="fade-up" data-aos-delay="200">
+            <div class="category">
                 <h3 class="category-title">Candid Photography</h3>
                 <a href="CandidPhotography.html">
-                <img src="candid.JPG" alt="Candid Photography"></a>
+                    <img src="candid.JPG" alt="Candid Photography">
+                </a>
             </div>
-            <div class="category" data-aos="fade-up" data-aos-delay="300">
+            <div class="category">
                 <h3 class="category-title">Wildlife Photography</h3>
                 <a href="WildelifePhotography.html">
-                <img src="wildlife.JPG" alt="Wildlife Photography"></a>
-
+                    <img src="wildlife.JPG" alt="Wildlife Photography">
+                </a>
             </div>
-            <div class="category" data-aos="fade-up" data-aos-delay="400">
+            <div class="category">
                 <h3 class="category-title">Street Photography</h3>
                 <a href="StreetPhotography.html">
-                <img src="street.jpg" alt="Street Photography"></a>
+                    <img src="street.jpg" alt="Street Photography">
+                </a>
             </div>
-            <div class="category" data-aos="fade-up" data-aos-delay="500">
+            <div class="category">
                 <h3 class="category-title">Bird Photography</h3>
                 <a href="BirdPhotography.html">
-                <img src="Bird.jpg" alt="Bird Photography"></a>
+                    <img src="Bird.jpg" alt="Bird Photography">
+                </a>
             </div>
-            <div class="category" data-aos="fade-up" data-aos-delay="500">
+            <div class="category">
                 <h3 class="category-title">Travel Photography</h3>
                 <a href="TravelPhotography.html">
-                <img src="TravelPhotography.jpg" alt="TravelPhotography"></a>
+                    <img src="TravelPhotography.jpg" alt="Travel Photography">
+                </a>
             </div>
         </div>
     </section>
@@ -154,6 +163,7 @@
         <p>&copy; 2025 CHITHARAN | All Rights Reserved</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         const menuToggle = document.querySelector('.menu-toggle');
@@ -169,6 +179,12 @@
             duration: 200, // Animation duration
             easing: "ease-in-out", // Smooth effect
             once: true // Only animate once
+        });
+        new Swiper('.swiper', {
+            loop: true,
+            autoplay: { delay: 3000 },
+            pagination: { el: '.swiper-pagination' },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }
         });
     });
     </script>

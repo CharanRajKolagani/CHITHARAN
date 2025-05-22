@@ -45,24 +45,26 @@
     <section class="hero" style="background-image: url('hero1.jpg');">
     <div class="hero-overlay">
         <div class="hero-content">
-    <div class="hero-left">
-    <span class="brand">CHITHARAN</span><br>
-    <span class="by-charan">by <strong>Charan Raj</strong></span>
-</div>
-    <div class="hero-right">
-        <span style="font-size:1.1em; color:#ffd700; font-weight:600;">
-            Where every frame tells your story,
-        </span><br>
-        <span style="font-size:0.98em;">
-             beautifully told.
-We don’t just take photos — we capture emotions, freeze moments, and craft visual poetry.
-From candid smiles to grand celebrations, our lens transforms memories into lasting art.
-With a keen eye for detail and a heart for storytelling, we specialize in fashion, portraits, events, and more.
-Powered by passion and precision, we ensure every click is as unique as you are.
-Let your moments live forever — beautifully curated, passionately captured.
-        </span>
-    </div>
-</div>
+            <div class="hero-left">
+                <span class="brand">CHITHARAN</span><br>
+                <span class="by-charan">by Charan Raj</span>
+            </div>
+            <div class="hero-right">
+                <button class="hero-toggle-btn" type="button">What is CHITHARAN</button>
+                <div class="hero-right-content">
+                    <span style="font-size:1.1em; color:#ffd700; font-weight:600;">
+                        Where every frame tells your story,
+                    </span><br>
+                    <span style="font-size:0.98em;">
+                        beautifully told. We don’t just take photos — we capture emotions, freeze moments, and craft visual poetry.
+                        From candid smiles to grand celebrations, our lens transforms memories into lasting art.
+                        With a keen eye for detail and a heart for storytelling, we specialize in fashion, portraits, events, and more.
+                        Powered by passion and precision, we ensure every click is as unique as you are.
+                        Let your moments live forever — beautifully curated, passionately captured.
+                    </span>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
     
@@ -134,11 +136,17 @@ Let your moments live forever — beautifully curated, passionately captured.
     <section id="booking">
         <h2>Book an Event</h2>
         <form id="booking-form">
-            <input type="text" placeholder="Full Name" required>
-            <input type="email" placeholder="Email" required>
-            <input type="date" required>
-            <textarea placeholder="Event Details" required></textarea>
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <label for="booking-date">Select Date:</label>
+            <input type="date" id="booking-date" name="date" required min="">
+            <label for="booking-slot">Select Slot:</label>
+            <select id="booking-slot" name="slot" required>
+                <option value="">Select a slot</option>
+            </select>
+            <textarea name="details" placeholder="Event Details" required></textarea>
             <button type="submit">Book Now</button>
+            <div id="booking-message" style="margin-top:10px;"></div>
         </form>
     </section>
 

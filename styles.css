@@ -96,7 +96,7 @@ header {
 }
 
 .social-icons a {
-    color: #ffd700;
+    color: #ffffff;
     font-size: 1.3rem;
     transition: color 0.3s, transform 0.3s;
 }
@@ -193,33 +193,6 @@ header {
     box-sizing: border-box;
 }
 @media (max-width: 700px) {
-    .header-menu nav ul,
-    .header-menu nav .social-icons {
-        flex-direction: column;
-        gap: 0.5rem;
-        background: rgba(0,0,0,0.97);
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100vw;
-        padding: 1rem 0 0.5rem 0;
-        display: none;
-        z-index: 1001;
-    }
-    .header-menu.active nav ul,
-    .header-menu.active nav .social-icons {
-        display: flex;
-    }
-    .header-menu nav .social-icons {
-        justify-content: center;
-        flex-direction: row;
-        gap: 1.5rem;
-        margin: 1rem 0 0.5rem 0;
-        width: 100%;
-        background: transparent;
-        position: static;
-        padding: 0;
-    }
     .header-menu nav .social-icons a {
         font-size: 1.6rem;
         color: #ffd700;
@@ -227,7 +200,7 @@ header {
     }
     .header-menu nav .social-icons a:hover {
         color: #fff;
-        transform: scale(1.15);
+        transform: scale(1.16);
     }
     .menu-panel {
         display: none;
@@ -277,12 +250,11 @@ header {
         flex-direction: column;
         align-items: center;
         background: rgba(0,0,0,0.97);
-        position: fixed;              /* Attach to viewport */
-        top: 60px;                    /* Directly below header */
-        left: 50%;                    /* Center horizontally */
-        transform: translateX(-50%);  /* Centering trick */
-        width: 90vw;                  /* Responsive width */
-        max-width: 350px;             /* Prevent too wide */
+        position: fixed;
+        top: 60px; /* height of header */
+        left: 0;
+        width: 100vw;
+        max-width: 100vw;
         border-radius: 0 0 18px 18px;
         padding: 1rem 0 1rem 0;
         z-index: 2000;
@@ -358,6 +330,7 @@ header {
     padding: 3rem 2rem;
     background-color: #f8f8f8;
     color: #222;
+    font-family: 'Papyrus', cursive; /* Use Papyrus for the whole section */
 }
 .portfolio-title {
     font-size: 2.5rem;
@@ -365,40 +338,53 @@ header {
     margin-bottom: 3rem;
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-family: 'Papyrus', cursive; /* Correct font property */
 }
+
 .categories {
     display: flex;
     flex-wrap: wrap;
+    gap: 2rem;
     justify-content: center;
-    gap: 40px;
-    padding-top: 20px;
+    margin-top: 2rem;
 }
 .category {
-    background: white;
-    padding: 1.5rem;
+    background: #fff;
     border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    width: 270px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 0;
+    width: 256px; /* 16px border if image is 240px */
+    min-height: unset;
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s;
+    margin: 0 auto;
 }
 .category:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-6px) scale(1.03);
 }
 .category-title {
+    color: #000;
     font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: #222;
+    margin-top: 1.2rem;         /* Add space from the top of the card */
+    margin-bottom: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background: none;
+    font-family: 'Papyrus', cursive; /* Correct font property */
+    text-align: center;
+    width: 100%;
 }
 .category img {
-    width: 100%;
-    border-radius: 12px;
-    transition: transform 0.3s, opacity 0.3s;
-}
-.category:hover img {
-    transform: scale(1.05);
+    width: 240px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: none;
+    margin-bottom: 0.5rem;
+    background: #333;
 }
 
 /* --- Forms --- */
@@ -476,8 +462,14 @@ footer {
         font-size: 1.5rem;
     }
     .category {
-        width: 95vw;
-        padding: 1rem 0.5rem;
+        width: 98vw;      /* Almost full width */
+        max-width: 260px; /* Prevents it from being too wide on small screens */
+        padding: 0;
+    }
+    .category img {
+        width: 96vw;      /* Image nearly fills the box */
+        max-width: 236px; /* Keeps a thin border */
+        height: 220px;
     }
 }
 @media (max-width: 700px) {
@@ -537,6 +529,77 @@ footer {
     .social-icons a {
         font-size: 1.6rem;
     }
+}
+
+/* --- Swiper Styles --- */
+.swiper {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    height: 350px; /* or whatever height you want */
+    background: #222;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.swiper-wrapper {
+    height: 100%;
+}
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.swiper-button-next,
+.swiper-button-prev {
+    color: #ffd700;
+}
+.swiper-pagination-bullet {
+    background: #ffd700;
+}
+.swiper-pagination-bullet-active {
+    background: #fff;
+}
+
+/* --- Custom Styles for Demo Purpose --- */
+.demo-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+.demo-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #ffd700;
+}
+.demo-description {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+.demo-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ffd700;
+    color: #222;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+.demo-button:hover {
+    background: #fff;
+    color: #222;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 

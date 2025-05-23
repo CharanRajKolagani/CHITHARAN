@@ -235,3 +235,132 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Booking Calendar Functionality
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Calendar Elements
+    const calendarMonth = document.querySelector('.booking-modern-calendar-month span');
+    const prevBtn = document.querySelector('.booking-modern-calendar-nav[aria-label="Previous Month"]');
+    const nextBtn = document.querySelector('.booking-modern-calendar-nav[aria-label="Next Month"]');
+    const calendarDates = document.querySelector('.booking-modern-calendar-dates');
+    const dateCells = () => document.querySelectorAll('.booking-modern-calendar-date');
+    const timeSlots = document.querySelectorAll('.booking-modern-times label input[type="radio"]');
+    const form = document.querySelector('.booking-modern-form');
+    const formInputs = form ? form.querySelectorAll('.booking-modern-input') : [];
+    const activeClass = 'booking-modern-calendar-date--active';
+
+    // Calendar State
+    let today = new Date();
+    let currentMonth = today.getMonth();
+    let currentYear = today.getFullYear();
+    let selectedDate = today.getDate();
+    let selectedMonth = currentMonth;
+    let selectedYear = currentYear;
+
+    // Helper: Get days in month
+    function daysInMonth(month, year) {
+        return new Date(year, month + 1, 0).getDate();
+    }
+
+    // Helper: Get first day of month (0=Sun)
+    function firstDayOfMonth(month, year) {
+        return new Date(year, month, 1).getDay();
+    }
+
+    // Render Calendar
+    function renderCalendar(month, year) {
+        calendarMonth.textContent = `${today.toLocaleString('default', { month: 'long' })} ${year}`;
+        // Use selected month/year for rendering
+        const monthName = new Date(year, month).toLocaleString('default', { month: 'long' });
+        calendarMonth.textContent = `${monthName} ${year}`;
+        const days = daysInMonth(month, year);
+        const firstDay = firstDayOfMonth(month, year);
+
+        // Clear previous dates
+        calendarDates.innerHTML = '';
+
+        // Add empty cells for days before 1st
+        for (let i = 0; i < firstDay; i++) {
+            const empty = document.createElement('span');
+            empty.className = 'booking-modern-calendar-date disabled';
+            empty.innerHTML = '&nbsp;';
+            calendarDates.appendChild(empty);
+        }
+
+        // Add days
+        for (let d = 1; d <= days; d++) {
+            const dayCell = document.createElement('span');
+            dayCell.className = 'booking-modern-calendar-date';
+            dayCell.textContent = d;
+
+            // Highlight today or selected
+            if (
+                d === selectedDate &&
+                month === selectedMonth &&
+                year === selectedYear
+            ) {
+                dayCell.classList.add(activeClass);
+            }
+            // Disable past days if current month/year
+            if (
+                (year < today.getFullYear()) ||
+                (year === today.getFullYear() && month < today.getMonth()) ||
+                (year === today.getFullYear() && month === today.getMonth() && d < today.getDate())
+            ) {
+                dayCell.classList.add('disabled');
+            } else {
+                dayCell.addEventListener('click', function () {
+                    selectedDate = d;
+                    selectedMonth = month;
+                    selectedYear = year;
+                    renderCalendar(month, year);
+                });
+            }
+            calendarDates.appendChild(dayCell);
+        }
+    }
+
+    // Navigation
+    prevBtn.addEventListener('click', function () {
+        if (currentMonth === 0) {
+            currentMonth = 11;
+            currentYear--;
+        } else {
+            currentMonth--;
+        }
+        renderCalendar(currentMonth, currentYear);
+    });
+    nextBtn.addEventListener('click', function () {
+        if (currentMonth === 11) {
+            currentMonth = 0;
+            currentYear++;
+        } else {
+            currentMonth++;
+        }
+        renderCalendar(currentMonth, currentYear);
+    });
+
+    // Initial Render
+    renderCalendar(currentMonth, currentYear);
+
+    // Form Submission (Demo)
+    if (form) {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            let valid = true;
+            formInputs.forEach(input => {
+                if (!input.value) valid = false;
+            });
+            if (!valid) {
+                alert('Please fill all fields.');
+                return;
+            }
+            const selectedTime = document.querySelector('.booking-modern-times input[type="radio"]:checked');
+            alert(
+                `Booking Confirmed!\nDate: ${selectedDate} ${new Date(selectedYear, selectedMonth).toLocaleString('default', { month: 'long' })} ${selectedYear}\nTime: ${selectedTime ? selectedTime.parentElement.textContent.trim() : 'N/A'}`
+            );
+            form.reset();
+        });
+    }
+});

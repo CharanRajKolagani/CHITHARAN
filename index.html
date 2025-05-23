@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bandham Photography | Charan Raj</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="booking.css">
+
 
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -144,7 +146,228 @@
     </div>
   </div>
 </section>
+<section id="booking" class="booking-section-unique">
+  <h2 class="booking-title-unique">Book a Consultation</h2>
+  <p class="booking-subtitle-unique">
+    Schedule a session to discuss your future events with our expert team.
+  </p>
+  <div class="booking-content-unique">
+    <div class="booking-calendar-unique">
+      <div class="booking-calendar-header-unique">
+        <i class="fa-regular fa-calendar"></i>
+        <span>Select Date &amp; Time</span>
+      </div>
+      <div class="booking-calendar-month-unique">
+        <button class="booking-calendar-nav-unique" aria-label="Previous Month">&lt;</button>
+        <span>May 2025</span>
+        <button class="booking-calendar-nav-unique" aria-label="Next Month">&gt;</button>
+      </div>
+      <div class="booking-calendar-grid-unique">
+        <div class="booking-calendar-days-unique">
+          <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+        </div>
+        <div class="booking-calendar-dates-unique"></div>
+      </div>
+      <div class="booking-times-label-unique">Available Time Slots</div>
+      <div class="booking-times-unique"></div>
+    </div>
+    <form class="booking-form-unique">
+      <div class="booking-form-title-unique">Your Information</div>
+      <input type="text" class="booking-input-unique" placeholder="Full Name" required>
+      <input type="email" class="booking-input-unique" placeholder="Email Address" required>
+      <input type="tel" class="booking-input-unique" placeholder="Phone Number" required>
+      <button type="submit" class="booking-btn-unique">Book a Session</button>
+      <div class="booking-message-unique"></div>
+    </form>
+  </div>
+</section>
+
 <script>
+    // Booking Calendar Functionality for .booking-section-unique
+document.addEventListener('DOMContentLoaded', function () {
+  const calendarMonth = document.querySelector('.booking-calendar-month-unique span');
+  const prevBtn = document.querySelector('.booking-calendar-nav-unique[aria-label="Previous Month"]');
+  const nextBtn = document.querySelector('.booking-calendar-nav-unique[aria-label="Next Month"]');
+  const calendarDates = document.querySelector('.booking-calendar-dates-unique');
+  const timesContainer = document.querySelector('.booking-times-unique');
+  const form = document.querySelector('.booking-form-unique');
+  const formInputs = form ? form.querySelectorAll('.booking-input-unique') : [];
+  const messageBox = document.querySelector('.booking-message-unique');
+  const activeClass = 'booking-calendar-date-unique--active';
+
+  // Demo: Available slots per date (simulate backend)
+  const slotMap = {};
+  const defaultSlots = ['10:00 AM', '12:00 PM', '2:00 PM', '4:00 PM'];
+  (function generateSlots() {
+  let d = new Date();
+  for (let i = 0; i < 60; i++) {
+    let dateStr = d.toISOString().slice(0, 10);
+    slotMap[dateStr] = [...defaultSlots]; // Always 4 slots
+    d.setDate(d.getDate() + 1);
+  }
+})();
+
+  let today = new Date();
+  let currentMonth = today.getMonth();
+  let currentYear = today.getFullYear();
+  let selectedDate = today.getDate();
+  let selectedMonth = currentMonth;
+  let selectedYear = currentYear;
+
+  function daysInMonth(month, year) {
+    return new Date(year, month + 1, 0).getDate();
+  }
+  function firstDayOfMonth(month, year) {
+    return new Date(year, month, 1).getDay();
+  }
+  function pad(n) {
+    return n < 10 ? '0' + n : n;
+  }
+  function getSelectedDateStr() {
+    return `${selectedYear}-${pad(selectedMonth + 1)}-${pad(selectedDate)}`;
+  }
+
+  function renderCalendar(month, year) {
+    const monthName = new Date(year, month).toLocaleString('default', { month: 'long' });
+    calendarMonth.textContent = `${monthName} ${year}`;
+    const days = daysInMonth(month, year);
+    const firstDay = firstDayOfMonth(month, year);
+
+    calendarDates.innerHTML = '';
+    for (let i = 0; i < firstDay; i++) {
+      const empty = document.createElement('span');
+      empty.className = 'booking-calendar-date-unique disabled';
+      empty.innerHTML = '&nbsp;';
+      calendarDates.appendChild(empty);
+    }
+    for (let d = 1; d <= days; d++) {
+      const dayCell = document.createElement('span');
+      dayCell.className = 'booking-calendar-date-unique';
+      dayCell.textContent = d;
+      if (
+        d === selectedDate &&
+        month === selectedMonth &&
+        year === selectedYear
+      ) {
+        dayCell.classList.add('booking-calendar-date-unique--active');
+      }
+      let isPast =
+        (year < today.getFullYear()) ||
+        (year === today.getFullYear() && month < today.getMonth()) ||
+        (year === today.getFullYear() && month === today.getMonth() && d < today.getDate());
+      if (isPast) {
+        dayCell.classList.add('disabled');
+      } else {
+        dayCell.addEventListener('click', function () {
+          selectedDate = d;
+          selectedMonth = month;
+          selectedYear = year;
+          renderCalendar(month, year);
+          renderSlots();
+        });
+      }
+      calendarDates.appendChild(dayCell);
+    }
+    renderSlots();
+  }
+
+  function renderSlots() {
+  timesContainer.innerHTML = '';
+  const dateStr = getSelectedDateStr();
+  const slots = slotMap[dateStr] || [];
+  if (slots.length === 0) {
+    timesContainer.innerHTML = '<div style="color:#c00;font-size:1.05em;">No slots available for this date.</div>';
+    return;
+  }
+  const now = new Date();
+  const isToday =
+    selectedYear === now.getFullYear() &&
+    selectedMonth === now.getMonth() &&
+    selectedDate === now.getDate();
+
+  slots.forEach((slot, idx) => {
+    const label = document.createElement('label');
+    label.textContent = slot;
+    const radio = document.createElement('input');
+    radio.type = 'radio';
+    radio.name = 'booking-time-unique';
+    radio.value = slot;
+
+    // Parse slot time (e.g., "10:00 AM")
+    let [time, period] = slot.split(' ');
+    let [hours, minutes] = time.split(':').map(Number);
+    if (period === 'PM' && hours !== 12) hours += 12;
+    if (period === 'AM' && hours === 12) hours = 0;
+
+    let slotDate = new Date(selectedYear, selectedMonth, selectedDate, hours, minutes);
+
+    // If today and slot time is in the past, disable and grey out
+    if (isToday && slotDate <= now) {
+      radio.disabled = true;
+      label.style.opacity = 0.5;
+      label.style.textDecoration = "line-through";
+      label.style.cursor = "not-allowed";
+    } else {
+      if (idx === 0 && !radio.disabled) radio.checked = true;
+      label.addEventListener('click', function () {
+        timesContainer.querySelectorAll('label').forEach(l => l.classList.remove('selected'));
+        label.classList.add('selected');
+      });
+    }
+    label.prepend(radio);
+    timesContainer.appendChild(label);
+  });
+
+  // Select first available by default
+  const firstAvailable = timesContainer.querySelector('input[type="radio"]:not(:disabled)');
+  if (firstAvailable) firstAvailable.parentElement.classList.add('selected');
+}
+
+  prevBtn.addEventListener('click', function () {
+    if (currentMonth === 0) {
+      currentMonth = 11;
+      currentYear--;
+    } else {
+      currentMonth--;
+    }
+    renderCalendar(currentMonth, currentYear);
+  });
+  nextBtn.addEventListener('click', function () {
+    if (currentMonth === 11) {
+      currentMonth = 0;
+      currentYear++;
+    } else {
+      currentMonth++;
+    }
+    renderCalendar(currentMonth, currentYear);
+  });
+
+  renderCalendar(currentMonth, currentYear);
+
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      let valid = true;
+      formInputs.forEach(input => {
+        if (!input.value) valid = false;
+      });
+      const selectedSlot = timesContainer.querySelector('input[type="radio"]:checked');
+      if (!valid || !selectedSlot) {
+        messageBox.textContent = "Please fill all fields and select a slot.";
+        messageBox.style.color = "#c00";
+        return;
+      }
+      messageBox.textContent = "Booking Confirmed! We'll contact you soon.";
+      messageBox.style.color = "#2a8c2a";
+      form.reset();
+      // Remove slot from slotMap
+      const dateStr = getSelectedDateStr();
+      slotMap[dateStr] = (slotMap[dateStr] || []).filter(s => s !== selectedSlot.value);
+      renderSlots();
+      setTimeout(() => { messageBox.textContent = ""; }, 4000);
+    });
+  }
+});
 // filepath: c:\Users\chara\Desktop\CHITHARAN\index.html
 document.addEventListener('DOMContentLoaded', function() {
     // Photo upload preview
@@ -180,33 +403,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <form id="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-
-    <section id="booking">
-        <h2>Book an Event</h2>
-        <form id="booking-form">
-            <input type="text" name="name" placeholder="Full Name" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <label for="booking-date">Select Date:</label>
-            <input type="date" id="booking-date" name="date" required min="">
-            <label for="booking-slot">Select Slot:</label>
-            <select id="booking-slot" name="slot" required>
-                <option value="">Select a slot</option>
-            </select>
-            <textarea name="details" placeholder="Event Details" required></textarea>
-            <button type="submit">Book Now</button>
-            <div id="booking-message" style="margin-top:10px;"></div>
-        </form>
-    </section>
-
     <footer>
         <p>&copy; 2025 CHITHARAN | All Rights Reserved</p>
     </footer>
@@ -236,5 +432,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     </script>
+
+  
+</section>
 </body>
 </html>

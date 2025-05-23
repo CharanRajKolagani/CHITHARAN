@@ -27,7 +27,7 @@ header {
 }
 
 .site-logo {
-    font-family: 'Papyrus', cursive;
+    font-family: 'Papyrus', Arial, sans-serif;
     font-size: 0.8rem;
     letter-spacing: 2px;
     margin-right: 2rem;
@@ -150,7 +150,7 @@ header {
 .brand {
     font-size: 2.5rem;
     color: #FFD700;
-    font-family: 'Papyrus', cursive;
+    font-family: 'Papyrus', Arial, sans-serif;
     letter-spacing: 2px;
     text-shadow: 1px 2px 8px #000;
 }
@@ -330,7 +330,7 @@ header {
     padding: 3rem 2rem;
     background-color: #ffffff; /* Match About Me section background */
     color: #222;
-    font-family: 'Papyrus', cursive;
+    font-family: 'Papyrus', Arial, sans-serif;
 }
 .portfolio-title {
     font-size: 2.5rem;
@@ -338,7 +338,7 @@ header {
     margin-bottom: 3rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-family: 'Papyrus', cursive; /* Correct font property */
+    font-family: 'Papyrus', Arial, sans-serif;
 }
 
 .categories {
@@ -373,7 +373,7 @@ header {
     font-weight: bold;
     letter-spacing: 1px;
     background: none;
-    font-family: 'Papyrus', cursive; /* Correct font property */
+    font-family: 'Papyrus', Arial, sans-serif;
     text-align: center;
     width: 100%;
 }
@@ -693,7 +693,7 @@ footer {
     z-index: 2;
 }
 .about-title {
-    font-family: 'Papyrus', cursive;
+    font-family: 'Papyrus', Arial, sans-serif;
     font-size: 2.3rem;
     color: #ffd700;
     margin-bottom: 1.2rem;
@@ -719,14 +719,21 @@ footer {
 }
 .about-text strong {
     color: #ffd700;
-    font-family: 'Papyrus', cursive;
+    font-family: 'Papyrus', Arial, sans-serif;
 }
-.about-text:hover {
-    box-shadow: 0 8px 32px #ffd70040, 0 2px 12px #000;
+.about-title {
+    font-family: 'Papyrus', Arial, sans-serif;
+    font-size: 2.3rem;
+    color: #4fc3f7;
+    margin-bottom: 1.2rem;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 12px #000, 0 0px 30px #4fc3f780;
+    animation: glow 2s infinite alternate;
 }
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(40px);}
-    to { opacity: 1; transform: translateY(0);}
+
+.about-text strong {
+    color: #4fc3f7;
+    font-family: 'Papyrus', Arial, sans-serif;
 }
 @media (max-width: 900px) {
     .about-card {
@@ -829,7 +836,7 @@ footer {
 }
 
 .about-title {
-    font-family: 'Papyrus', cursive;
+    font-family: 'Papyrus', Arial, sans-serif;
     font-size: 2.3rem;
     color: #4fc3f7;
     margin-bottom: 1.2rem;
@@ -855,7 +862,7 @@ footer {
 }
 .about-text strong {
     color: #4fc3f7;
-    font-family: 'Papyrus', cursive;
+    font-family: 'Papyrus', Arial, sans-serif;
 }
 .about-text:hover {
     box-shadow: 0 8px 32px #4fc3f740, 0 2px 12px #000;

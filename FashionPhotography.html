@@ -3,92 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fashion Photography</title>
+    <title>Fashion Photography | Bandham Photography</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="booking.css">
+    <link rel="stylesheet" href="contactus.css">
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.cdnfonts.com/css/harry-p" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="fashion-photography-page">
     <header>
-        <h1>Bandham Photography</h1>
-        
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#blog">Blog</a></li>
-                <li><a href="index.html#about">About Me</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-                <li><a href="index.html#booking">Book Event</a></li>
-            </ul>
+        <div class="site-logo">CHITHARAN</div>
+        <nav class="main-nav">
+            <button class="menu-toggle" aria-label="Open Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="header-menu">
+                <div class="menu-panel">
+                    <ul class="nav-links">
+                        <li><a href="index.html#portfolio">Portfolio</a></li>
+                        <li><a href="index.html#blog">Blog</a></li>
+                        <li><a href="index.html#about">About Me</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="index.html#booking">Book Event</a></li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61565215583674" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/bandham_photography/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@Charanrajkolagani" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
         </nav>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/profile.php?id=61565215583674" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.instagram.com/bandham_photography/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.youtube.com/@Charanrajkolagani" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-        </div>
     </header>
-    
-    <section class="gallery">
-        <div class="gallery-item"><img src="FashionPhotography/DSC_0531.JPG" alt="Fashion Image 1"></div>
-        <div class="gallery-item"><img src="FashionPhotography/DSC_0548.JPG" alt="Fashion Image 2"></div>
-        <div class="gallery-item"><img src="FashionPhotography/DSC_0557.JPG" alt="Fashion Image 3"></div>
-        <div class="gallery-item"><img src="FashionPhotography/DSC_0568.JPG" alt="Fashion Image 4"></div>
-        <div class="gallery-item"><img src="FashionPhotography/DSC_0571.JPG" alt="Fashion Image 5"></div>
-        <div class="gallery-item"><img src="FashionPhotography/DSC_0565.JPG" alt="Fashion Image 6"></div>
-        <div class="gallery-item"><img src="FashionPhotography/DSC_0559.JPG" alt="Fashion Image 7"></div>
-        <div class="gallery-item"><img src="FashionPhotography/DSC_0561.JPG" alt="Fashion Image 8"></div>
-        <div class="gallery-item"><img src="FashionPhotography/DSC_0566.JPG" alt="Fashion Image 9"></div>
+    <section class="hero" style="background-image: url('fashion.JPG');">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <span class="brand">FASHION PHOTOGRAPHY</span><br>
+                    <span class="by-charan">by Charan Raj</span>
+                </div>
+                <div class="hero-right">
+                    <button class="hero-toggle-btn" type="button">What is Fashion Photography?</button>
+                    <div class="hero-right-content">
+                        <span style="font-size:1.1em; color:#ffd700; font-weight:600;">
+                            Style, Elegance, and Artistry
+                        </span><br>
+                        <span style="font-size:0.98em;">
+                            Fashion photography is about capturing the essence of style, personality, and trends. Each frame is crafted to highlight the beauty of clothing, accessories, and the unique character of the model. We blend creativity and professionalism to deliver magazine-worthy images for portfolios, brands, and personal projects.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+    <section id="portfolio" class="portfolio-section">
+        <h2 class="portfolio-title">Fashion Portfolio</h2>
+        <div class="gallery">
+            <img src="FashionPhotography/DSC_0530.JPG" alt="Fashion 1">
+            <img src="FashionPhotography/DSC_0548.JPG" alt="Fashion 4">
+            <img src="FashionPhotography/DSC_0532.JPG" alt="Fashion 3">  
+            <img src="FashionPhotography/DSC_0550.JPG" alt="Fashion 5">
+            <img src="FashionPhotography/DSC_0557.JPG" alt="Fashion 6">
+            <img src="FashionPhotography/DSC_0559.JPG" alt="Fashion 7">
+            <img src="FashionPhotography/DSC_0561.JPG" alt="Fashion 8">
+            <img src="FashionPhotography/DSC_0565.JPG" alt="Fashion 9">
+            <img src="FashionPhotography/DSC_0566.JPG" alt="Fashion 10">
+            <img src="FashionPhotography/DSC_0568.JPG" alt="Fashion 11">
+            <img src="FashionPhotography/DSC_0571.JPG" alt="Fashion 12">
+            <img src="FashionPhotography/DSC_0531.JPG" alt="Fashion 2">
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 CHITHARAN | All Rights Reserved</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html>
-
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-        /* Social Icons Styling */
-        .social-icons {
-        display: flex;
-        gap: 30px;
-    }
-
-    .social-icons a {
-        color: white;
-        font-size: 1.5rem;
-        transition: color 0.3s ease;
-    }
-
-    .social-icons a:hover {
-        color: #ffffff;
-    }
-    header {
-        background: black;
-        color: white;
-        padding: 20px;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1000;
-    }
-    .h1 a {
-        color: white ;
-    }
-    
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 10px;
-        padding: 80px 20px 20px;
-    }
-    .gallery-item img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        transition: transform 0.3s;
-    }
-    .gallery-item img:hover {
-        transform: scale(1.05);
-    }
-</style>

@@ -531,6 +531,143 @@ footer {
     }
 }
 
+/* --- Ensure original aspect ratio for all gallery images on all portfolio pages --- */
+@media (min-width: 0px) {
+  .gallery img {
+    aspect-ratio: unset !important;
+    object-fit: unset !important;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px 0 rgba(0,0,0,0.13);
+    background: #222;
+    cursor: pointer;
+  }
+}
+
+/* --- Adjust hero image position for Fashion Photography page (desktop only) */
+@media (min-width: 700px) {
+  body.fashion-photography-page .hero {
+    background-position: center 18%;
+    background-size: 70%; /* Reduced zoom */
+  }
+}
+
+/* Show hero-toggle-btn and hero-right-content on desktop for Fashion Photography */
+@media (min-width: 700px) {
+  body.fashion-photography-page .hero-toggle-btn {
+    display: block;
+    margin: 0 auto 18px auto;
+    font-size: 1rem;
+    max-width: 320px;
+    width: 100%;
+  }
+  body.fashion-photography-page .hero-right-content {
+    display: none;
+    margin: 0 auto;
+    max-width: 420px;
+    text-align: center;
+  }
+  body.fashion-photography-page .hero-right.active .hero-right-content {
+    display: block;
+    animation: fadeIn 0.25s;
+  }
+  body.fashion-photography-page .brand {
+    font-size: 2rem;
+  }
+}
+
+/* --- Adjust hero image position for Celebrity Photography page (desktop only) */
+@media (min-width: 700px) {
+  body.celebrity-photography-page .hero {
+    background-position: center 18%;
+    background-size: 70%; /* Reduced zoom */
+  }
+  body.celebrity-photography-page .hero-toggle-btn {
+    display: block;
+    margin: 0 auto 18px auto;
+    font-size: 1rem;
+    max-width: 320px;
+    width: 100%;
+  }
+  body.celebrity-photography-page .hero-right-content {
+    display: none;
+    margin: 0 auto;
+    max-width: 420px;
+    text-align: center;
+  }
+  body.celebrity-photography-page .hero-right.active .hero-right-content {
+    display: block;
+    animation: fadeIn 0.25s;
+  }
+  body.celebrity-photography-page .brand {
+    font-size: 2rem;
+  }
+}
+
+/* --- Adjust hero image position for Candid Photography page (desktop only) */
+@media (min-width: 700px) {
+  body.candid-photography-page .hero {
+    background-position: center 18%;
+    background-size: 100%; /* Reduced zoom */
+  }
+  body.candid-photography-page .hero-toggle-btn {
+    display: block;
+    margin: 0 auto 18px auto;
+    font-size: 1rem;
+    max-width: 320px;
+    width: 100%;
+  }
+  body.candid-photography-page .hero-right-content {
+    display: none;
+    margin: 0 auto;
+    max-width: 420px;
+    text-align: center;
+  }
+  body.candid-photography-page .hero-right.active .hero-right-content {
+    display: block;
+    animation: fadeIn 0.25s;
+  }
+  body.candid-photography-page .brand {
+    font-size: 2rem;
+  }
+}
+
+/* --- Adjust hero image position for Wildlife Photography page (desktop only) --- */
+@media (min-width: 700px) {
+  body.wildlife-photography-page .hero {
+    background-position: center 18%;
+    background-size: 100%; /* 1:1 zoom */
+  }
+  body.wildlife-photography-page .hero-toggle-btn {
+    display: block;
+    margin: 0 auto 18px auto;
+    font-size: 1rem;
+    max-width: 320px;
+    width: 100%;
+  }
+  body.wildlife-photography-page .hero-right-content {
+    display: none;
+    margin: 0 auto;
+    max-width: 420px;
+    text-align: center;
+  }
+  body.wildlife-photography-page .hero-right.active .hero-right-content {
+    display: block;
+    animation: fadeIn 0.25s;
+  }
+  body.wildlife-photography-page .brand {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 700px) {
+  body.wildlife-photography-page .hero {
+    background-size: 180% !important;
+    background-position: center 10%;
+  }
+}
+
 /* --- Swiper Styles --- */
 .swiper {
     width: 100%;
@@ -1247,6 +1384,148 @@ footer {
         margin-right: auto;
         float: none;
     }
+}
+
+/* --- Adjust hero image position for Street Photography page (desktop only) --- */
+@media (min-width: 700px) {
+  body.street-photography-page .hero {
+    background-position: center 30%;
+    background-size: 100%;
+  }
+  body.street-photography-page .hero-toggle-btn {
+    display: block;
+    margin: 0 auto 18px auto;
+    font-size: 1rem;
+    max-width: 320px;
+    width: 100%;
+  }
+  body.street-photography-page .hero-right-content {
+    display: none;
+    margin: 0 auto;
+    max-width: 420px;
+    text-align: center;
+  }
+  body.street-photography-page .hero-right.active .hero-right-content {
+    display: block;
+    animation: fadeIn 0.25s;
+  }
+  body.street-photography-page .brand {
+    font-size: 2rem;
+  }
+}
+
+/* --- Adjust hero image position for Bird Photography page (desktop only) --- */
+@media (min-width: 700px) {
+  body.bird-photography-page .hero {
+    background-position: center 40%;
+    background-size: 100%;
+  }
+  body.bird-photography-page .hero-toggle-btn {
+    display: block;
+    margin: 0 auto 18px auto;
+    font-size: 1rem;
+    max-width: 320px;
+    width: 100%;
+  }
+  body.bird-photography-page .hero-right-content {
+    display: none;
+    margin: 0 auto;
+    max-width: 420px;
+    text-align: center;
+  }
+  body.bird-photography-page .hero-right.active .hero-right-content {
+    display: block;
+    animation: fadeIn 0.25s;
+  }
+  body.bird-photography-page .brand {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 700px) {
+  body.bird-photography-page .hero {
+    background-size: 180% !important;
+    background-position: center 18% !important;
+  }
+}
+
+/* --- Adjust hero image position for Travel Photography page (desktop only) --- */
+@media (min-width: 700px) {
+  body.travel-photography-page .hero {
+    background-position: center 40%;
+    background-size: 100%;
+  }
+  body.travel-photography-page .hero-toggle-btn {
+    display: block;
+    margin: 0 auto 18px auto;
+    font-size: 1rem;
+    max-width: 320px;
+    width: 100%;
+  }
+  body.travel-photography-page .hero-right-content {
+    display: none;
+    margin: 0 auto;
+    max-width: 420px;
+    text-align: center;
+  }
+  body.travel-photography-page .hero-right.active .hero-right-content {
+    display: block;
+    animation: fadeIn 0.25s;
+  }
+  body.travel-photography-page .brand {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 700px) {
+  body.travel-photography-page .hero {
+    background-size: 180% !important;
+    background-position: center 18% !important;
+  }
+}
+
+/* --- Ensure original aspect ratio for Street, Bird, and Travel Photography gallery images --- */
+@media (min-width: 0px) {
+  body.street-photography-page .gallery img,
+  body.bird-photography-page .gallery img,
+  body.travel-photography-page .gallery img {
+    aspect-ratio: unset !important;
+    object-fit: unset !important;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px 0 rgba(0,0,0,0.13);
+    background: #222;
+    cursor: pointer;
+  }
+}
+
+/* --- Gallery Grid Styles for Street, Bird, and Travel Photography pages --- */
+body.street-photography-page .gallery,
+body.bird-photography-page .gallery,
+body.travel-photography-page .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  padding: 0 0 2.5rem 0;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+body.street-photography-page .gallery img,
+body.bird-photography-page .gallery img,
+body.travel-photography-page .gallery img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px 0 rgba(0,0,0,0.13);
+  background: #222;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+body.street-photography-page .gallery img:hover,
+body.bird-photography-page .gallery img:hover,
+body.travel-photography-page .gallery img:hover {
+  transform: scale(1.04);
 }
 
 

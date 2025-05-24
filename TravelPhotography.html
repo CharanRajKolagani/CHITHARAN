@@ -3,101 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Photography</title>
+    <title>Travel Photography | Bandham Photography</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
-<body>
+<body class="travel-photography-page">
     <header>
-        <h1>Bandham Photography</h1>
-        
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#blog">Blog</a></li>
-                <li><a href="index.html#about">About Me</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-                <li><a href="index.html#booking">Book Event</a></li>
-            </ul>
+        <div class="site-logo">CHITHARAN</div>
+        <nav class="main-nav">
+            <button class="menu-toggle" aria-label="Open Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="header-menu">
+                <div class="menu-panel">
+                    <ul class="nav-links">
+                        <li><a href="index.html#portfolio">Portfolio</a></li>
+                        <li><a href="index.html#blog">Blog</a></li>
+                        <li><a href="index.html#about">About Me</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="index.html#booking">Book Event</a></li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61565215583674" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/bandham_photography/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@Charanrajkolagani" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
         </nav>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/profile.php?id=61565215583674" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.instagram.com/bandham_photography/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.youtube.com/@Charanrajkolagani" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-        </div>
     </header>
-    
-    <section class="gallery">
-        <div class="gallery-item"><img src="TravelPhotography/edit-5h.jpg" alt="Travel Image 12"></div>
-        <div class="gallery-item"><img src="TravelPhotography/edit-5i.jpg" alt="Travel Image 13"></div>
-        <div class="gallery-item"><img src="TravelPhotography/edit-5j.jpg" alt="Travel Image 14"></div>
-        <div class="gallery-item"><img src="TravelPhotography/edit-5k.jpg" alt="Travel Image 15"></div>
-        <div class="gallery-item"><img src="TravelPhotography/edit-5l.jpg" alt="Travel Image 16"></div>
-        <div class="gallery-item"><img src="TravelPhotography/edit-5o.jpg" alt="Travel Image 17"></div>
-        <div class="gallery-item"><img src="TravelPhotography/edit-5m.jpg" alt="Travel Image 18"></div>
-        <div class="gallery-item"><img src="TravelPhotography/DSC_1369.JPG" alt="Travel Image 7"></div>
-        <div class="gallery-item"><img src="TravelPhotography/DSC_1432.JPG" alt="Travel Image 8"></div>
-        <div class="gallery-item"><img src="TravelPhotography/DSC_1444.JPG" alt="Travel Image 9"></div>
-        <div class="gallery-item"><img src="TravelPhotography/DSC_1445.JPG" alt="Travel Image 10"></div>
-        <div class="gallery-item"><img src="TravelPhotography/edit-5d.jpg" alt="Travel Image 11"></div>
-        <div class="gallery-item"><img src="TravelPhotography/DSC_1367.JPG" alt="Travel Image 6"></div>
-        <div class="gallery-item"><img src="TravelPhotography/DSC_1365.JPG" alt="Travel Image 1"></div>
-        <div class="gallery-item"><img src="TravelPhotography/DSC_1366.JPG" alt="Travel Image 2"></div>
-        <div class="gallery-item"><img src="TravelPhotography/DSC_1359.JPG" alt="Travel Image 3"></div>
-        <div class="gallery-item"><img src="TravelPhotography/DSC_1356.JPG" alt="Travel Image 4"></div>
-        <div class="gallery-item"><img src="TravelPhotography/edit-5e.jpg" alt="Travel Image 5"></div>
+    <section class="hero" style="background-image: url('TravelPhotography/edit-5h.jpg'); background-size: 100%; background-position: center 40%;">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <span class="brand">TRAVEL PHOTOGRAPHY</span><br>
+                    <span class="by-charan">by Charan Raj</span>
+                </div>
+                <div class="hero-right">
+                    <button class="hero-toggle-btn" type="button">What is Travel Photography?</button>
+                    <div class="hero-right-content">
+                        <span style="font-size:1.1em; color:#ffd700; font-weight:600;">
+                            Adventure, Culture, and Exploration
+                        </span><br>
+                        <span style="font-size:0.98em;">
+                            Travel photography is about capturing the spirit of adventure, the beauty of landscapes, and the diversity of cultures. It tells stories of journeys, people, and places, inspiring wanderlust and preserving memories from around the world.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+    <section id="portfolio" class="portfolio-section">
+        <h2 class="portfolio-title">Travel Portfolio</h2>
+        <div class="gallery">
+            <!-- Travel Photography Images -->
+            <img src="TravelPhotography/DSC_1365.JPG" alt="Travel Image 1">
+            <img src="TravelPhotography/DSC_1366.JPG" alt="Travel Image 2">
+            <img src="TravelPhotography/DSC_1359.JPG" alt="Travel Image 3">
+            <img src="TravelPhotography/DSC_1356.JPG" alt="Travel Image 4">
+            <img src="TravelPhotography/edit-5e.jpg" alt="Travel Image 5">
+            <img src="TravelPhotography/DSC_1367.JPG" alt="Travel Image 6">
+            <img src="TravelPhotography/DSC_1369.JPG" alt="Travel Image 7">
+            <img src="TravelPhotography/DSC_1432.JPG" alt="Travel Image 8">
+            <img src="TravelPhotography/DSC_1444.JPG" alt="Travel Image 9">
+            <img src="TravelPhotography/DSC_1445.JPG" alt="Travel Image 10">
+            <img src="TravelPhotography/edit-5d.jpg" alt="Travel Image 11">
+            <img src="TravelPhotography/edit-5h.jpg" alt="Travel Image 12">
+            <img src="TravelPhotography/edit-5i.jpg" alt="Travel Image 13">
+            <img src="TravelPhotography/edit-5j.jpg" alt="Travel Image 14">
+            <img src="TravelPhotography/edit-5k.jpg" alt="Travel Image 15">
+            <img src="TravelPhotography/edit-5l.jpg" alt="Travel Image 16">
+            <img src="TravelPhotography/edit-5o.jpg" alt="Travel Image 17">
+            <img src="TravelPhotography/edit-5m.jpg" alt="Travel Image 18">
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 CHITHARAN | All Rights Reserved</p>
+    </footer>
 </body>
 </html>
-
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-        /* Social Icons Styling */
-        .social-icons {
-        display: flex;
-        gap: 30px;
-    }
-
-    .social-icons a {
-        color: white;
-        font-size: 1.5rem;
-        transition: color 0.3s ease;
-    }
-
-    .social-icons a:hover {
-        color: #ffffff;
-    }
-    header {
-        background: black;
-        color: white;
-        padding: 20px;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1000;
-    }
-    .h1 a {
-        color: white ;
-    }
-    
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 10px;
-        padding: 80px 20px 20px;
-    }
-    .gallery-item img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        transition: transform 0.3s;
-    }
-    .gallery-item img:hover {
-        transform: scale(1.05);
-    }
-</style>

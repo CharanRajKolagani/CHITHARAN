@@ -3,107 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bird Photography</title>
+    <title>Bird Photography | Bandham Photography</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
-<body>
+<body class="bird-photography-page">
     <header>
-        <h1>Bandham Photography</h1>
-        
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#blog">Blog</a></li>
-                <li><a href="index.html#about">About Me</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-                <li><a href="index.html#booking">Book Event</a></li>
-            </ul>
+        <div class="site-logo">CHITHARAN</div>
+        <nav class="main-nav">
+            <button class="menu-toggle" aria-label="Open Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="header-menu">
+                <div class="menu-panel">
+                    <ul class="nav-links">
+                        <li><a href="index.html#portfolio">Portfolio</a></li>
+                        <li><a href="index.html#blog">Blog</a></li>
+                        <li><a href="index.html#about">About Me</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="index.html#booking">Book Event</a></li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61565215583674" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/bandham_photography/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@Charanrajkolagani" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
         </nav>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/profile.php?id=61565215583674" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.instagram.com/bandham_photography/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.youtube.com/@Charanrajkolagani" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-        </div>
     </header>
-    
-    <section class="gallery">
-        <div class="gallery-item"><img src="BirdPhotography/edit-1.jpg" alt="BirdPhotography Image 1"></div>
-        <div class="gallery-item"><img src="BirdPhotography/edit-1b.jpg" alt="BirdPhotography Image 2"></div>
-        <div class="gallery-item"><img src="BirdPhotography/edit-2a.jpg" alt="BirdPhotography Image 3"></div>
-        <div class="gallery-item"><img src="BirdPhotography/edit-2b.jpg" alt="BirdPhotography Image 4"></div>
-        <div class="gallery-item"><img src="BirdPhotography/edit-2c.jpg" alt="BirdPhotography Image 5"></div>
-        <div class="gallery-item"><img src="BirdPhotography/edit-2d.jpg" alt="BirdPhotography Image 6"></div>
-        <div class="gallery-item"><img src="BirdPhotography/edit-3b.jpg" alt="BirdPhotography Image 7"></div>
-        <div class="gallery-item"><img src="BirdPhotography/edi-3a.jpg" alt="BirdPhotography Image 8"></div>
-        <div class="gallery-item"><img src="BirdPhotography/edit-3c.jpg" alt="BirdPhotography Image 9"></div>
-        <div class="gallery-item"><img src="BirdPhotography/edit-3d.jpg" alt="BirdPhotography Image 10"></div>
-        <div class="gallery-item"><img src="BirdPhotography/edit-5b.jpg" alt="BirdPhotography Image 11"></div>
-        <div class="gallery-item"><img src="BirdPhotography/edit-5g.jpg" alt="BirdPhotography Image 12"></div>
-        <div class="gallery-item"><img src="BirdPhotography/edit-7a.jpg" alt="BirdPhotography Image 13"></div>
-        <div class="gallery-item"><img src="BirdPhotography/edit-7b.jpg" alt="BirdPhotography Image 14"></div>
-        <div class="gallery-item"><img src="BirdPhotography/edit-7c.jpg" alt="BirdPhotography Image 15"></div>
-        <div class="gallery-item"><img src="BirdPhotography/edit-7d.jpg" alt="BirdPhotography Image 16"></div>
-        <div class="gallery-item"><img src="BirdPhotography/edit-7i.jpg" alt="BirdPhotography Image 17"></div>
-        <div class="gallery-item"><img src="BirdPhotography/edit-7i1.jpg" alt="BirdPhotography Image 18"></div>
-        <div class="gallery-item"><img src="BirdPhotography/edit-7j.jpg" alt="BirdPhotography Image 19"></div>
-        <div class="gallery-item"><img src="BirdPhotography/edit-7j1.jpg" alt="BirdPhotography Image 20"></div>
-        <div class="gallery-item"><img src="BirdPhotography/edit-7k.jpg" alt="BirdPhotography Image 21"></div>
-        <div class="gallery-item"><img src="BirdPhotography/edit-7m.jpg" alt="BirdPhotography Image 22"></div>
-        <div class="gallery-item"><img src="BirdPhotography/edit-8q.jpg" alt="BirdPhotography Image 23"></div>
-        <div class="gallery-item"><img src="BirdPhotography/edit-8r.jpg" alt="BirdPhotography Image 24"></div>
+    <section class="hero" style="background-image: url('BirdPhotography/edit-1.jpg'); background-size: 100%; background-position: center 40%;">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <span class="brand">BIRD PHOTOGRAPHY</span><br>
+                    <span class="by-charan">by Charan Raj</span>
+                </div>
+                <div class="hero-right">
+                    <button class="hero-toggle-btn" type="button">What is Bird Photography?</button>
+                    <div class="hero-right-content">
+                        <span style="font-size:1.1em; color:#ffd700; font-weight:600;">
+                            Beauty, Flight, and Nature’s Wonders
+                        </span><br>
+                        <span style="font-size:0.98em;">
+                            Bird photography is about patience, timing, and a deep appreciation for nature. It captures the grace, color, and behavior of birds in their natural habitats, celebrating the diversity and wonder of avian life.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+    <section id="portfolio" class="portfolio-section">
+        <h2 class="portfolio-title">Bird Portfolio</h2>
+        <div class="gallery">
+            <!-- Bird Photography Images -->
+            <img src="BirdPhotography/edit-1.jpg" alt="Bird Image 1">
+            <img src="BirdPhotography/edit-1b.jpg" alt="Bird Image 2">
+            <img src="BirdPhotography/edit-2a.jpg" alt="Bird Image 3">
+            <img src="BirdPhotography/edit-2b.jpg" alt="Bird Image 4">
+            <img src="BirdPhotography/edit-2c.jpg" alt="Bird Image 5">
+            <img src="BirdPhotography/edit-2d.jpg" alt="Bird Image 6">
+            <img src="BirdPhotography/edit-3b.jpg" alt="Bird Image 7">
+            <img src="BirdPhotography/edit-3c.jpg" alt="Bird Image 8">
+            <img src="BirdPhotography/edit-3d.jpg" alt="Bird Image 9">
+            <img src="BirdPhotography/edit-5b.jpg" alt="Bird Image 10">
+            <img src="BirdPhotography/edit-5f.jpg" alt="Bird Image 11">
+            <img src="BirdPhotography/edit-5g.jpg" alt="Bird Image 12">
+            <img src="BirdPhotography/edit-7a.jpg" alt="Bird Image 13">
+            <img src="BirdPhotography/edit-7b.jpg" alt="Bird Image 14">
+            <img src="BirdPhotography/edit-7c.jpg" alt="Bird Image 15">
+            <img src="BirdPhotography/edit-7d.jpg" alt="Bird Image 16">
+            <img src="BirdPhotography/edit-7e.jpg" alt="Bird Image 17">
+            <img src="BirdPhotography/edit-7f.jpg" alt="Bird Image 18">
+            <img src="BirdPhotography/Edit-7g1.jpg" alt="Bird Image 19">
+            <img src="BirdPhotography/edit-7h.jpg" alt="Bird Image 20">
+            <img src="BirdPhotography/edit-7i.jpg" alt="Bird Image 21">
+            <img src="BirdPhotography/edit-7i1.jpg" alt="Bird Image 22">
+            <img src="BirdPhotography/edit-7j.jpg" alt="Bird Image 23">
+            <img src="BirdPhotography/edit-7j1.jpg" alt="Bird Image 24">
+            <img src="BirdPhotography/edit-7k.jpg" alt="Bird Image 25">
+            <img src="BirdPhotography/edit-7m.jpg" alt="Bird Image 26">
+            <img src="BirdPhotography/edit-8q.jpg" alt="Bird Image 27">
+            <img src="BirdPhotography/edit-8r.jpg" alt="Bird Image 28">
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 CHITHARAN | All Rights Reserved</p>
+    </footer>
 </body>
 </html>
-
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-        /* Social Icons Styling */
-        .social-icons {
-        display: flex;
-        gap: 30px;
-    }
-
-    .social-icons a {
-        color: white;
-        font-size: 1.5rem;
-        transition: color 0.3s ease;
-    }
-
-    .social-icons a:hover {
-        color: #ffffff;
-    }
-    header {
-        background: black;
-        color: white;
-        padding: 20px;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1000;
-    }
-    .h1 a {
-        color: white ;
-    }
-    
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 10px;
-        padding: 80px 20px 20px;
-    }
-    .gallery-item img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        transition: transform 0.3s;
-    }
-    .gallery-item img:hover {
-        transform: scale(1.05);
-    }
-</style>

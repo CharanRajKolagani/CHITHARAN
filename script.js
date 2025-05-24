@@ -112,65 +112,62 @@ const slotsPerDay = [
 let bookedSlots = {}; // { "2025-05-23": ["09:00 AM - 11:00 AM", ...] }
 
 function setMinDate() {
+    const bookingDateInput = document.getElementById('booking-date');
+    if (!bookingDateInput) return;
     const today = new Date();
     const yyyy = today.getFullYear();
     const mm = String(today.getMonth() + 1).padStart(2, '0');
     const dd = String(today.getDate()).padStart(2, '0');
-    document.getElementById('booking-date').min = `${yyyy}-${mm}-${dd}`;
+    bookingDateInput.min = `${yyyy}-${mm}-${dd}`;
 }
 setMinDate();
 
-document.getElementById('booking-date').addEventListener('change', function() {
-    const date = this.value;
-    const slotSelect = document.getElementById('booking-slot');
-    slotSelect.innerHTML = '<option value="">Select a slot</option>';
-    if (!date) return;
-    // Simulate fetching booked slots from backend
-    const taken = bookedSlots[date] || [];
-    slotsPerDay.forEach(slot => {
-        const disabled = taken.includes(slot) ? 'disabled' : '';
-        slotSelect.innerHTML += `<option value="${slot}" ${disabled}>${slot}${disabled ? ' (Booked)' : ''}</option>`;
+const bookingDateInput = document.getElementById('booking-date');
+if (bookingDateInput) {
+    bookingDateInput.addEventListener('change', function() {
+        const date = this.value;
+        const slotSelect = document.getElementById('booking-slot');
+        if (!slotSelect) return;
+        slotSelect.innerHTML = '<option value="">Select a slot</option>';
+        if (!date) return;
+        // Simulate fetching booked slots from backend
+        const taken = bookedSlots[date] || [];
+        slotsPerDay.forEach(slot => {
+            const disabled = taken.includes(slot) ? 'disabled' : '';
+            slotSelect.innerHTML += `<option value="${slot}" ${disabled}>${slot}${disabled ? ' (Booked)' : ''}</option>`;
+        });
     });
-});
+}
 
-document.getElementById('booking-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const date = document.getElementById('booking-date').value;
-    const slot = document.getElementById('booking-slot').value;
-    const name = this.name.value;
-    const email = this.email.value;
-    const details = this.details.value;
-    const msg = document.getElementById('booking-message');
-    if (!date || !slot) {
-        msg.textContent = "Please select a date and slot.";
-        msg.style.color = "red";
-        return;
-    }
-    // Simulate backend booking
-    if (!bookedSlots[date]) bookedSlots[date] = [];
-    if (bookedSlots[date].includes(slot)) {
-        msg.textContent = "Sorry, this slot is already booked.";
-        msg.style.color = "red";
-        return;
-    }
-    bookedSlots[date].push(slot);
-    msg.textContent = "Booking successful! We'll contact you soon.";
-    msg.style.color = "green";
-    this.reset();
-    document.getElementById('booking-slot').innerHTML = '<option value="">Select a slot</option>';
-});
-
-// For backend: Replace the above booking logic with an AJAX/fetch POST to your server
-// Example:
-/*
-fetch('/api/book-slot', {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({name, email, date, slot, details})
-})
-.then(res => res.json())
-.then(data => { ... });
-*/
+const bookingForm = document.getElementById('booking-form');
+if (bookingForm) {
+    bookingForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const date = document.getElementById('booking-date').value;
+        const slot = document.getElementById('booking-slot').value;
+        const name = this.name.value;
+        const email = this.email.value;
+        const details = this.details.value;
+        const msg = document.getElementById('booking-message');
+        if (!date || !slot) {
+            msg.textContent = "Please select a date and slot.";
+            msg.style.color = "red";
+            return;
+        }
+        // Simulate backend booking
+        if (!bookedSlots[date]) bookedSlots[date] = [];
+        if (bookedSlots[date].includes(slot)) {
+            msg.textContent = "Sorry, this slot is already booked.";
+            msg.style.color = "red";
+            return;
+        }
+        bookedSlots[date].push(slot);
+        msg.textContent = "Booking successful! We'll contact you soon.";
+        msg.style.color = "green";
+        this.reset();
+        document.getElementById('booking-slot').innerHTML = '<option value="">Select a slot</option>';
+    });
+}
 
 // Hero-right toggle for mobile
 document.addEventListener('DOMContentLoaded', function() {
@@ -180,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (heroToggleBtn && heroRight && heroLeft) {
         heroToggleBtn.addEventListener('click', function() {
             heroRight.classList.toggle('active');
-            // Hide hero-left when active, show when not
+            // Hide hero-left when active, show when not (for mobile and desktop)
             if (heroRight.classList.contains('active')) {
                 heroLeft.classList.add('hide');
             } else {

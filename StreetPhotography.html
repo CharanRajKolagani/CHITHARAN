@@ -3,106 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Street Photography</title>
+    <title>Street Photography | Bandham Photography</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
-<body>
+<body class="street-photography-page">
     <header>
-        <h1>Bandham Photography</h1>
-        
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#blog">Blog</a></li>
-                <li><a href="index.html#about">About Me</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-                <li><a href="index.html#booking">Book Event</a></li>
-            </ul>
+        <div class="site-logo">CHITHARAN</div>
+        <nav class="main-nav">
+            <button class="menu-toggle" aria-label="Open Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="header-menu">
+                <div class="menu-panel">
+                    <ul class="nav-links">
+                        <li><a href="index.html#portfolio">Portfolio</a></li>
+                        <li><a href="index.html#blog">Blog</a></li>
+                        <li><a href="index.html#about">About Me</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="index.html#booking">Book Event</a></li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61565215583674" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/bandham_photography/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@Charanrajkolagani" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
         </nav>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/profile.php?id=61565215583674" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.instagram.com/bandham_photography/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.youtube.com/@Charanrajkolagani" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-        </div>
     </header>
-    
-    <section class="gallery">
-        <div class="gallery-item"><img src="StreetPhotography/DSC_4153edit.jpg" alt="StreetPhotography Image 1"></div>
-        <div class="gallery-item"><img src="StreetPhotography/DSC_4126edit.jpg" alt="StreetPhotography Image 2"></div>
-        <div class="gallery-item"><img src="StreetPhotography/DSC_4119.JPG" alt="StreetPhotography Image 3"></div>
-        <div class="gallery-item"><img src="StreetPhotography/DSC_4120.JPG" alt="StreetPhotography Image 4"></div>
-        <div class="gallery-item"><img src="StreetPhotography/DSC_4121.JPG" alt="StreetPhotography Image 5"></div>
-        <div class="gallery-item"><img src="StreetPhotography/DSC_4123.JPG" alt="StreetPhotography Image 6"></div>
-        <div class="gallery-item"><img src="StreetPhotography/DSC_4131edit.jpg" alt="StreetPhotography Image 7"></div>
-        <div class="gallery-item"><img src="StreetPhotography/DSC_4132.JPG" alt="StreetPhotography Image 8"></div>
-        <div class="gallery-item"><img src="StreetPhotography/DSC_4133edit.jpg" alt="StreetPhotography Image 9"></div>
-        <div class="gallery-item"><img src="StreetPhotography/DSC_4135edit.jpg" alt="StreetPhotography Image 10"></div>
-        <div class="gallery-item"><img src="StreetPhotography/DSC_4136edit.jpg" alt="StreetPhotography Image 11"></div>
-        <div class="gallery-item"><img src="StreetPhotography/DSC_4137edit.jpg" alt="StreetPhotography Image 12"></div>
-        <div class="gallery-item"><img src="StreetPhotography/DSC_4160.JPG" alt="StreetPhotography Image 13"></div>
-        <div class="gallery-item"><img src="StreetPhotography/DSC_4162edit.jpg" alt="StreetPhotography Image 14"></div>
-        <div class="gallery-item"><img src="StreetPhotography/IMG20240615190524.jpg" alt="StreetPhotography Image 15"></div>
-        <div class="gallery-item"><img src="StreetPhotography/IMG20240615190526.jpg" alt="StreetPhotography Image 16"></div>
-        <div class="gallery-item"><img src="StreetPhotography/IMG20240615190609.jpg" alt="StreetPhotography Image 17"></div>
-        <div class="gallery-item"><img src="StreetPhotography/DSC_1142.JPG" alt="StreetPhotography Image 18"></div>
-        <div class="gallery-item"><img src="StreetPhotography/DSC_1143.JPG" alt="StreetPhotography Image 19"></div>
-        <div class="gallery-item"><img src="StreetPhotography/DSC_1146.JPG" alt="StreetPhotography Image 20"></div>
-        <div class="gallery-item"><img src="StreetPhotography/DSC_1151.JPG" alt="StreetPhotography Image 21"></div>
-        <div class="gallery-item"><img src="StreetPhotography/reflection.jpg" alt="StreetPhotography Image 23"></div>
-
+    <section class="hero" style="background-image: url('StreetPhotography/DSC_4153edit.jpg'); background-size: 100%; background-position: center 30%;">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <span class="brand">STREET PHOTOGRAPHY</span><br>
+                    <span class="by-charan">by Charan Raj</span>
+                </div>
+                <div class="hero-right">
+                    <button class="hero-toggle-btn" type="button">What is Street Photography?</button>
+                    <div class="hero-right-content">
+                        <span style="font-size:1.1em; color:#ffd700; font-weight:600;">
+                            Life, Culture, and Urban Stories
+                        </span><br>
+                        <span style="font-size:0.98em;">
+                            Street photography captures the candid moments, vibrant culture, and unique stories found in everyday urban life. It’s about observing and documenting the world as it unfolds, highlighting the beauty in the ordinary and the extraordinary in the mundane.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+    <section id="portfolio" class="portfolio-section">
+        <h2 class="portfolio-title">Street Portfolio</h2>
+        <div class="gallery">
+            <!-- Street Photography Images -->
+            <img src="StreetPhotography/DSC_4153edit.jpg" alt="StreetPhotography Image 1">
+            <img src="StreetPhotography/DSC_4126edit.jpg" alt="StreetPhotography Image 2">
+            <img src="StreetPhotography/DSC_4119.JPG" alt="StreetPhotography Image 3">
+            <img src="StreetPhotography/DSC_4120.JPG" alt="StreetPhotography Image 4">
+            <img src="StreetPhotography/DSC_4121.JPG" alt="StreetPhotography Image 5">
+            <img src="StreetPhotography/DSC_4123.JPG" alt="StreetPhotography Image 6">
+            <img src="StreetPhotography/DSC_4131edit.jpg" alt="StreetPhotography Image 7">
+            <img src="StreetPhotography/DSC_4132.JPG" alt="StreetPhotography Image 8">
+            <img src="StreetPhotography/DSC_4133edit.jpg" alt="StreetPhotography Image 9">
+            <img src="StreetPhotography/DSC_4135edit.jpg" alt="StreetPhotography Image 10">
+            <img src="StreetPhotography/DSC_4136edit.jpg" alt="StreetPhotography Image 11">
+            <img src="StreetPhotography/DSC_4137edit.jpg" alt="StreetPhotography Image 12">
+            <img src="StreetPhotography/DSC_4160.JPG" alt="StreetPhotography Image 13">
+            <img src="StreetPhotography/DSC_4162edit.jpg" alt="StreetPhotography Image 14">
+            <img src="StreetPhotography/IMG20240615190524.jpg" alt="StreetPhotography Image 15">
+            <img src="StreetPhotography/IMG20240615190526.jpg" alt="StreetPhotography Image 16">
+            <img src="StreetPhotography/IMG20240615190609.jpg" alt="StreetPhotography Image 17">
+            <img src="StreetPhotography/DSC_1142.JPG" alt="StreetPhotography Image 18">
+            <img src="StreetPhotography/DSC_1143.JPG" alt="StreetPhotography Image 19">
+            <img src="StreetPhotography/DSC_1146.JPG" alt="StreetPhotography Image 20">
+            <img src="StreetPhotography/DSC_1151.JPG" alt="StreetPhotography Image 21">
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 CHITHARAN | All Rights Reserved</p>
+    </footer>
 </body>
 </html>
-
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-        /* Social Icons Styling */
-        .social-icons {
-        display: flex;
-        gap: 30px;
-    }
-
-    .social-icons a {
-        color: white;
-        font-size: 1.5rem;
-        transition: color 0.3s ease;
-    }
-
-    .social-icons a:hover {
-        color: #ffffff;
-    }
-    header {
-        background: black;
-        color: white;
-        padding: 20px;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1000;
-    }
-    .h1 a {
-        color: white ;
-    }
-    
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 10px;
-        padding: 80px 20px 20px;
-    }
-    .gallery-item img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        transition: transform 0.3s;
-    }
-    .gallery-item img:hover {
-        transform: scale(1.05);
-    }
-</style>

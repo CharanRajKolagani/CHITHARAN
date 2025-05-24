@@ -3,42 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Candid Photography</title>
+    <title>Candid Photography | Bandham Photography</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
-<body>
+<body class="candid-photography-page">
     <header>
-        <h1>Bandham Photography</h1>
-        
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#blog">Blog</a></li>
-                <li><a href="index.html#about">About Me</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-                <li><a href="index.html#booking">Book Event</a></li>
-            </ul>
+        <div class="site-logo">CHITHARAN</div>
+        <nav class="main-nav">
+            <button class="menu-toggle" aria-label="Open Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="header-menu">
+                <div class="menu-panel">
+                    <ul class="nav-links">
+                        <li><a href="index.html#portfolio">Portfolio</a></li>
+                        <li><a href="index.html#blog">Blog</a></li>
+                        <li><a href="index.html#about">About Me</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="index.html#booking">Book Event</a></li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61565215583674" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/bandham_photography/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@Charanrajkolagani" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
         </nav>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/profile.php?id=61565215583674" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.instagram.com/bandham_photography/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.youtube.com/@Charanrajkolagani" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-        </div>
     </header>
-    
-    <section class="gallery">
-        <div class="gallery-item"><img src="CandidPhotography/DSC_1710.JPG" alt="Candid Image 1"></div>
-        <div class="gallery-item"><img src="CandidPhotography/DSC_1712.JPG" alt="Candid Image 2"></div>
-        <div class="gallery-item"><img src="CandidPhotography/DSC_1724.JPG" alt="Candid Image 3"></div>
-        <div class="gallery-item"><img src="CandidPhotography/DSC_1726.JPG" alt="Candid Image 4"></div>
-        <div class="gallery-item"><img src="CandidPhotography/DSC_1866.JPG" alt="Candid Image 5"></div>
-        <div class="gallery-item"><img src="CandidPhotography/DSC_1904.JPG" alt="Candid Image 6"></div>
-        <div class="gallery-item"><img src="CandidPhotography/DSC_1907.JPG" alt="Candid Image 7"></div>
-        <div class="gallery-item"><img src="CandidPhotography/DSC_1952.JPG" alt="Candid Image 8"></div>
-        <div class="gallery-item"><img src="CandidPhotography/DSC_1965.JPG" alt="Candid Image 10"></div>
-        <div class="gallery-item"><img src="CandidPhotography/DSC_1976.JPG" alt="Candid Image 11"></div>
+    <section class="hero" style="background-image: url('CandidPhotography/DSC_1710.JPG'); background-size: 100%;">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <span class="brand">CANDID PHOTOGRAPHY</span><br>
+                    <span class="by-charan">by Charan Raj</span>
+                </div>
+                <div class="hero-right">
+                    <button class="hero-toggle-btn" type="button">What is Candid Photography?</button>
+                    <div class="hero-right-content">
+                        <span style="font-size:1.1em; color:#ffd700; font-weight:600;">
+                            Real Moments, True Emotions
+                        </span><br>
+                        <span style="font-size:0.98em;">
+                            Candid photography is about capturing genuine expressions and spontaneous moments. It tells stories as they unfold, preserving the authenticity and emotion of every scene. We focus on natural light, real smiles, and the beauty of unposed memories.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+    <section id="portfolio" class="portfolio-section">
+        <h2 class="portfolio-title">Candid Portfolio</h2>
+        <div class="gallery">
+            <img src="CandidPhotography/DSC_1710.JPG" alt="Candid Image 1" style="width:auto; height:auto; max-width:100%; max-height:420px; display:block; margin:auto; object-fit:unset; aspect-ratio:auto;">
+            <img src="CandidPhotography/DSC_1712.JPG" alt="Candid Image 2" style="width:auto; height:auto; max-width:100%; max-height:420px; display:block; margin:auto; object-fit:unset; aspect-ratio:auto;">
+            <img src="CandidPhotography/DSC_1724.JPG" alt="Candid Image 3" style="width:auto; height:auto; max-width:100%; max-height:420px; display:block; margin:auto; object-fit:unset; aspect-ratio:auto;">
+            <img src="CandidPhotography/DSC_1726.JPG" alt="Candid Image 4" style="width:auto; height:auto; max-width:100%; max-height:420px; display:block; margin:auto; object-fit:unset; aspect-ratio:auto;">
+            <img src="CandidPhotography/DSC_1866.JPG" alt="Candid Image 5" style="width:auto; height:auto; max-width:100%; max-height:420px; display:block; margin:auto; object-fit:unset; aspect-ratio:auto;">
+            <img src="CandidPhotography/DSC_1904.JPG" alt="Candid Image 6" style="width:auto; height:auto; max-width:100%; max-height:420px; display:block; margin:auto; object-fit:unset; aspect-ratio:auto;">
+            <img src="CandidPhotography/DSC_1907.JPG" alt="Candid Image 7" style="width:auto; height:auto; max-width:100%; max-height:420px; display:block; margin:auto; object-fit:unset; aspect-ratio:auto;">
+            <img src="CandidPhotography/DSC_1952.JPG" alt="Candid Image 8" style="width:auto; height:auto; max-width:100%; max-height:420px; display:block; margin:auto; object-fit:unset; aspect-ratio:auto;">
+            <img src="CandidPhotography/DSC_1956.JPG" alt="Candid Image 9" style="width:auto; height:auto; max-width:100%; max-height:420px; display:block; margin:auto; object-fit:unset; aspect-ratio:auto;">
+            <img src="CandidPhotography/DSC_1965.JPG" alt="Candid Image 10" style="width:auto; height:auto; max-width:100%; max-height:420px; display:block; margin:auto; object-fit:unset; aspect-ratio:auto;">
+            <img src="CandidPhotography/DSC_1976.JPG" alt="Candid Image 11" style="width:auto; height:auto; max-width:100%; max-height:420px; display:block; margin:auto; object-fit:unset; aspect-ratio:auto;">
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 CHITHARAN | All Rights Reserved</p>
+    </footer>
 </body>
 </html>
 
@@ -91,5 +126,104 @@
     }
     .gallery-item img:hover {
         transform: scale(1.05);
+    }
+
+    /* Hero Section Styling */
+    .hero {
+        position: relative;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: left;
+        overflow: hidden;
+    }
+
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 800px;
+        padding: 20px;
+    }
+
+    .brand {
+        font-size: 2.5em;
+        font-weight: bold;
+        display: block;
+    }
+
+    .by-charan {
+        font-size: 1.2em;
+        display: block;
+        margin-top: 10px;
+    }
+
+    .hero-toggle-btn {
+        background: #ffd700;
+        color: black;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1em;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: background 0.3s;
+    }
+
+    .hero-toggle-btn:hover {
+        background: #e6b800;
+    }
+
+    .hero-right-content {
+        margin-top: 20px;
+    }
+
+    .portfolio-section {
+        padding: 60px 20px;
+        background: #f4f4f4;
+    }
+
+    .portfolio-title {
+        font-size: 2.5em;
+        margin-bottom: 40px;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 15px;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+        transform: scale(1.05);
+    }
+
+    footer {
+        background: black;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        position: relative;
+        bottom: 0;
+        width: 100%;
     }
 </style>

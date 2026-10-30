@@ -1529,3 +1529,205 @@ body.travel-photography-page .gallery img:hover {
 }
 
 
+
+
+/* =========================================================
+   CHITHARAN — cinematic polish layer
+   Additive overrides only; existing pages and image paths stay intact.
+   ========================================================= */
+:root {
+  --chitharan-ink: #17191d;
+  --chitharan-paper: #f4f1ea;
+  --chitharan-gold: #d8bd78;
+  --chitharan-ease: cubic-bezier(.22,.68,0,1);
+}
+html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+body {
+  background: var(--chitharan-ink);
+  letter-spacing: .01em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+header {
+  height: 72px;
+  padding-inline: clamp(1rem, 4vw, 4rem);
+  background: rgba(23,25,29,.92);
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  box-shadow: 0 10px 35px rgba(0,0,0,.16);
+  backdrop-filter: blur(16px);
+}
+.site-logo {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1rem, 1.4vw, 1.3rem);
+  letter-spacing: .22em;
+}
+.nav-links { gap: clamp(.4rem, 1vw, 1.2rem); }
+.nav-links li a {
+  font-size: .9rem;
+  letter-spacing: .06em;
+  border-radius: 2px;
+  padding: .7rem .85rem;
+}
+.nav-links li a:hover,
+.nav-links li a:focus-visible {
+  background: transparent;
+  color: var(--chitharan-gold);
+}
+.social-icons a { transition: color .3s var(--chitharan-ease), transform .3s var(--chitharan-ease); }
+.social-icons a:hover { color: var(--chitharan-gold); }
+.hero {
+  min-height: min(88vh, 980px);
+  min-height: min(88svh, 980px);
+  overflow: hidden;
+  isolation: isolate;
+  background-color: #202126;
+  background-position: center;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(10,11,13,.58), rgba(10,11,13,.12) 62%, rgba(10,11,13,.25)),
+              linear-gradient(0deg, rgba(10,11,13,.56), transparent 48%);
+}
+.hero-overlay { background: transparent; z-index: 1; }
+.hero-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: clamp(2rem, 6vw, 6rem) clamp(1rem, 5vw, 4rem);
+  gap: clamp(.8rem, 2vw, 1.5rem);
+  animation: chitharan-rise .95s var(--chitharan-ease) both;
+}
+.brand {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(3.4rem, 10vw, 9rem);
+  line-height: .92;
+  letter-spacing: .045em;
+  color: #f5f0e6;
+  text-shadow: 0 8px 40px rgba(0,0,0,.42);
+  text-wrap: balance;
+}
+.by-charan {
+  font-size: clamp(1rem, 1.7vw, 1.4rem);
+  font-weight: 500;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.hero-right {
+  max-width: 700px;
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  line-height: 1.8;
+  text-shadow: 0 2px 16px rgba(0,0,0,.55);
+}
+.hero-right strong, .hero-right b { color: var(--chitharan-gold); }
+.hero-toggle-btn, button, .demo-button, .about-uiux-btn {
+  border-radius: 2px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  transition: transform .3s var(--chitharan-ease), background .3s ease, color .3s ease;
+}
+.hero-toggle-btn:hover, button:hover, .demo-button:hover, .about-uiux-btn:hover {
+  transform: translateY(-3px);
+}
+#portfolio {
+  padding: clamp(4rem, 8vw, 8rem) clamp(1rem, 4vw, 4rem);
+  background: var(--chitharan-paper);
+  color: var(--chitharan-ink);
+}
+.portfolio-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.4rem, 5.5vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: .035em;
+  margin-bottom: clamp(2rem, 5vw, 4rem);
+}
+.categories {
+  max-width: 1500px;
+  gap: clamp(1rem, 2.2vw, 2rem);
+  margin-inline: auto;
+}
+.category {
+  position: relative;
+  width: clamp(230px, 28vw, 340px);
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  align-items: stretch;
+  overflow: hidden;
+  transition: transform .5s var(--chitharan-ease);
+}
+.category:hover { transform: translateY(-7px); }
+.category-title {
+  order: 2;
+  margin: 1rem 0 .25rem;
+  padding-inline: .3rem;
+  color: var(--chitharan-ink);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.15rem, 1.8vw, 1.65rem);
+  line-height: 1.2;
+  letter-spacing: .02em;
+}
+.category img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: contain;
+  border-radius: 0;
+  margin: 0;
+  background: #e6e1d7;
+  transition: transform .8s var(--chitharan-ease), filter .5s ease;
+}
+.category:hover img { transform: scale(1.025); filter: saturate(1.04); }
+.gallery img {
+  border-radius: 2px;
+  box-shadow: 0 12px 35px rgba(0,0,0,.16);
+  transition: transform .65s var(--chitharan-ease), box-shadow .65s var(--chitharan-ease);
+}
+.gallery img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(0,0,0,.24);
+}
+.about-uiux-modern { border-radius: 4px; box-shadow: 0 20px 70px rgba(0,0,0,.12); }
+.about-uiux-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  letter-spacing: -.02em;
+}
+.about-uiux-photo { border-radius: 3px; border-width: 0; }
+footer {
+  padding: 2rem 1rem;
+  background: #111215;
+  color: rgba(255,255,255,.78);
+  letter-spacing: .06em;
+}
+:focus-visible { outline: 2px solid var(--chitharan-gold); outline-offset: 4px; }
+@keyframes chitharan-rise {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 700px) {
+  header { height: 64px; }
+  .site-logo { font-size: .95rem; letter-spacing: .14em; }
+  .hero { min-height: 76svh; }
+  .hero-content { margin: 0; padding: 4rem 1.25rem; }
+  .brand { font-size: clamp(3rem, 15vw, 5.4rem); }
+  .by-charan { font-size: .9rem; line-height: 1.6; }
+  .hero-right { font-size: 1rem; }
+  #portfolio { padding: 4rem 1rem; }
+  .portfolio-title { font-size: clamp(2.2rem, 11vw, 3.5rem); }
+  .categories { gap: 2rem 1rem; }
+  .category { width: min(100%, 320px); }
+  .category img { aspect-ratio: 4 / 5; }
+  .menu-panel { top: 64px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
